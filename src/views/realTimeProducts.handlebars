@@ -1,0 +1,60 @@
+<h1>RealTimeProducts</h1>
+<div id="formContainer">
+
+    <h2>Agregar Nuevo Producto</h2>
+    <form id="form">
+
+        
+        {{!-- title --}}
+        <div>
+            <label>title</label>
+            <input type="text" id="title">
+        </div>
+        
+        {{!-- description --}}
+        <div>
+            <label>description</label>
+            <input type="text" id="description">
+        </div>
+        
+        {{!-- code --}}
+        <div>
+            <label>code</label>
+            <input type="text" id="code">
+        </div>
+        
+        {{!-- price --}}
+        <div>
+            <label>price</label>
+            <input type="number" id="price">
+        </div>
+        
+        {{!-- stock --}}
+        <div>
+            <label>stock</label>
+            <input type="number" id="stock">
+        </div>
+        
+        {{!-- category --}}
+        <div>
+            <label>category</label>
+            <input type="text" id="category">
+        </div>
+
+
+        <input type="submit" value="Enviar">
+
+
+    </form>
+</div>
+
+<div id="seccionProducts">
+    <h2>Products</h2>
+    <div class="productsContainer" id="idProductsContainer">
+
+    </div>
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="index.js"></script>

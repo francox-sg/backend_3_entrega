@@ -1,0 +1,85 @@
+h1{
+    color: black;
+    width: 100%;
+    text-align: center;
+    background-color: grey;
+}
+
+h2{
+    font-size: 2rem;
+
+}
+
+#seccionProducts{
+    background-color: lightblue;
+    text-align: center;
+}
+
+.productsContainer{
+    padding: 15px;
+    background-color: lightblue;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cardContainer{
+    width: 200px;
+    height: 300px;
+    background-color: lightsalmon;
+    border: 1px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 1px black;
+}
+
+
+#formContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 15px;
+    background-color: lightcoral;
+}
+
+#form{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+#form div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#navbar{
+    background-color: lightgreen;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    
+}
+
+#navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0px;
+}
+
+#navbar ul li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+}
