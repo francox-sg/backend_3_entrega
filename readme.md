@@ -1,6 +1,10 @@
-# Proyecto Final Backend 2
+# Backend 3
 
-Este proyecto toma como base la entrega final de Backend 1 en el cual se desarrolló un Servidor Backend para un e-commerce con persistencia en MONGODB, el mismo posee los siguientes Endpoints:
+Este proyecto toma como base la entrega final de Backend 1 y Backend 2 
+
+## Desarrollo de Entrega Final Backend 1
+Se desarrolló un Servidor Backend para un e-commerce con persistencia en MONGODB, el mismo posee los siguientes Endpoints:
+
 
 - Products
 	- //Devolver todos los Productos - GET
