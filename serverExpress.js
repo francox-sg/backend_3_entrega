@@ -10,6 +10,7 @@ import { initMongoDB } from './src/db/database.js';
 //Backend2
 import authRouter from './src/routes/auth.routes.js';
 import userRouter from './src/routes/user.routes.js';
+import mocksRouter from './src/routes/mocks.routes.js';
 import { initializePassport } from './src/config/passport.config.js';
 import passport from 'passport';
 import cookieParser from 'cookie-parser';
@@ -37,6 +38,7 @@ app.use('/api/carts',cartRouter)
 app.use('/',viewsRouter) //Vista de Handlebars
 app.use('/api/auth', authRouter)
 app.use('/api/users', userRouter)
+app.use('/api/mocks', mocksRouter)
 
 //Passport
 initializePassport()

@@ -1,4 +1,5 @@
 import * as services from '../services/carts.service.js'
+import { addTicket } from '../services/ticket.service.js';
 import { getProductById, updateProduct } from '../services/products.service.js';
 import { resTicketDto } from '../dtos/ticket.dto.js';
 import { v4 as uuidv4 } from 'uuid';
@@ -217,7 +218,7 @@ export const purchase = async (req, res)=>{
             purchaserId: userComplete[0]._id
         }
 
-        const ticketResponse = await services.addTicket(ticket)
+        const ticketResponse = await addTicket(ticket)
 
         if(ticketResponse!=null){
             console.log(ticketResponse);

@@ -71,3 +71,11 @@ Se sube archivo.envTest para completar variables de entorno de:
 - MONGO ATLAS
 - JSON WEB TOKEN
 - MAILING
+
+
+## Desarrollo de Primera Entrega Backend 3
+Se agregan los endpoints:
+- /api/mocks/mockingusers  --> Devuelve 50 Usuarios (no guarda en Mongo)
+- /api/mocks/generateData/:cantUsers/:cantPets  --> genera {cantUsers} usuarios y {cantPets} pets, los guarda en mongo y muestra los datos
+- /api/mocks/users --> Devuelve todos los usuarios de Mongo 
+- /api/mocks/pets --> Devuelve todos los Pets de Mongo

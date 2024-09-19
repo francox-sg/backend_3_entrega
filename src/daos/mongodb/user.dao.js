@@ -16,6 +16,12 @@ class UserManager{
         return  await userModel.create(user)
     }
 
+    //Metodo Agregar users
+    async createUsers(users){
+        
+        return  await userModel.insertMany(users)
+    }
+
     //Metodo Devuelve user por code
     async getUserByEmail(email){
         

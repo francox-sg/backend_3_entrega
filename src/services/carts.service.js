@@ -1,6 +1,6 @@
 import { CartDaoMongoDB } from "../daos/mongodb/cart.dao.js";
 import { ProductDaoMongoDB } from "../daos/mongodb/product.dao.js";
-import { TicketDaoMongoDB } from "../daos/mongodb/ticket.dao.js";
+//import { TicketDaoMongoDB } from "../daos/mongodb/ticket.dao.js";
 import { UserDaoMongoDB } from "../daos/mongodb/user.dao.js";
 
 export const addCart = async()=>{
@@ -100,7 +100,7 @@ export const deleteAllProductsOfCart = async(cartId)=>{
     }
 }
 
-export const addTicket = async(ticket)=>{
+/* export const addTicket = async(ticket)=>{
     try {
         
             const resp= await TicketDaoMongoDB.addTicket(ticket);
@@ -110,7 +110,7 @@ export const addTicket = async(ticket)=>{
     } catch (error) {
         console.log(error);
     }
-}
+} */
 export const getUserByEmail = async(email)=>{
     try {
         
