@@ -1,0 +1,49 @@
+paths:
+  /api/auth/register:
+    post:
+      tags:
+      - Registro
+      summary: Registro de Usuario
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#components/parameters/schemas/SchemaRegistroUsuario'
+        required: true
+      responses:
+        200:
+          description: Se registro el Usuario Correctamente
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schema/Auth/RespuestaRegister'
+        404:
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schema/Auth/Error'
+  /api/auth/Login:
+    post:
+      tags:
+      - Login
+      summary: Login de Usuario
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#components/parameters/schemas/SchemaLoginUsuario'
+        required: true
+      responses:
+        200:
+          description: Se registro el Usuario Correctamente
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schema/Auth/RespuestaLogin'
+        404:
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schema/Auth/Error'

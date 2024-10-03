@@ -14,8 +14,10 @@ import mocksRouter from './src/routes/mocks.routes.js';
 import { initializePassport } from './src/config/passport.config.js';
 import passport from 'passport';
 import cookieParser from 'cookie-parser';
-
-
+//Backend 3
+import swaggerUI from 'swagger-ui-express'
+import swaggerJSDoc from 'swagger-jsdoc'
+import { info } from './src/docs/info.js';
 
 //Conexion con DB Mongo
 initMongoDB()
@@ -24,11 +26,15 @@ const PORT= 8080;
 
 const app = express();
 
+const specs = swaggerJSDoc(info)
+
 //Middlewares
 app.use(express.json()) //Middleware para entender JSON que vine del Body de los req
 app.use(express.urlencoded({extended:true})) //Reconoce Parametros de URL
 app.use(express.static(`${__dirname}/public`))
 app.use(cookieParser())
+app.use('/docs',swaggerUI.serve, swaggerUI.setup(specs))
+
 
 const httpServer = app.listen(PORT, ()=>{console.log(`Servidor iniciado en Puerto ${PORT}`);});
 

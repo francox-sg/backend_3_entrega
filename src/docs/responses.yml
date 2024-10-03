@@ -1,0 +1,61 @@
+components:
+  schema:
+    Auth:
+      RespuestaRegister:
+        type: object
+        properties:
+          _id:
+            type: string
+            description: Id de Usuario
+          first_name:
+            type: string
+            description: Nombre de Usuario
+          last_name:
+            type: string
+            description: Apellido de Usuario
+          email:
+            type: string
+            description: Email de Usuario@gmail.com
+          age:
+            type: number
+            description: Edad de Usuario
+          password:
+            type: string
+            description: Password de Usuario
+          role:
+            type: string
+            description: Rol de Usuario
+          cart:
+            type: array
+            description: Carrito de Usuario
+        example: 
+          _id: ksjadljasdlkasjdla
+          first_name: Franco
+          last_name: Galeano
+          email: franco
+          age: 32
+          password: 123456
+          role: admin
+          cart: []
+      RespuestaLogin:
+        type: object
+        properties:
+          token:
+            type: string
+            description: Token Usuario
+          message:
+            type: string
+            description: Mensaje de Logueo
+        example: 
+          token: ksjadljasd43535435435345453453454534534543lkasjdla
+          message: Login Exitoso!
+      Error:
+        type: object
+        properties:
+          msj:
+            type: string
+            description: Error Encontrado
+        example:
+          msj: Error al crear el Usuario
+
+

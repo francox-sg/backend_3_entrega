@@ -1,0 +1,55 @@
+components:
+  parameters:
+    schemas:
+      SchemaRegistroUsuario:
+        type: object
+        required:
+          - first_name
+          - last_name
+          - email
+          - age
+          - password
+        properties:
+          first_name:
+            type: string
+            description: Nombre de Usuario
+            example: Franco
+          last_name:
+            type: string
+            description: Apellido de Usuario
+            example: Galeano
+          email:
+            type: string
+            description: Email de Usuario
+            example: franco@gmail.com
+          age:
+            type: number
+            description: Edad de Usuario
+            example: 32
+          password:
+            type: string
+            description: Password de Usuario
+            example: 123456
+          role:
+            type: string
+            description: Rol de Usuario
+            example: admin
+      SchemaLoginUsuario:
+        type: object
+        required:
+          - email
+          - password
+        properties:
+          email:
+            type: string
+            description: Email de Usuario
+            example: franco@gmail.com
+          password:
+            type: string
+            description: Password de Usuario
+            example: 123456
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

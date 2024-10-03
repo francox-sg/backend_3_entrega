@@ -46,7 +46,9 @@ class MailService {
     }
 
     async sendMail({to, subject, type, name}) {
-        const message = this.getMessageTemplate(type, name)
+        //Se deshabilita envío de mensajeria por haber dado de baja la clave en gmail
+
+        /* const message = this.getMessageTemplate(type, name)
 
         const info = await this.transporter.sendMail({
             from: "Equipo Backend 2",
@@ -56,8 +58,10 @@ class MailService {
             attatchments:[]
         })
         console.log(message);
+        */
+        console.log("Mensajeria deshabilitada");
+        } 
         
-    }
 }
 
 export const mailService = new MailService();
