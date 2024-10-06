@@ -57,5 +57,27 @@ components:
             description: Error Encontrado
         example:
           msj: Error al crear el Usuario
-
-
+      RespuestaCurrent:
+        type: object
+        properties:
+          message:
+            type: string
+            description: Mensaje Current
+          user:
+            type: object
+            properties: 
+              email:
+                type: string
+                description: Email de Usuario
+              role:
+                type: string
+                description: Rol de usuario
+              cart:
+                type: string
+                description: Id de carrito asociado al Usuario
+        example: 
+          message: Bienvenido!
+          user: 
+            email: franco@gmail.com
+            role: admin
+            cart: hkjh324ttuytuy324jb

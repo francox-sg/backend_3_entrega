@@ -47,3 +47,17 @@ paths:
             application/json:
               schema:
                 $ref: '#components/schema/Auth/Error'
+  /api/auth/current:
+    get:
+      tags:
+      - Current
+      summary: Usuario Logueado
+      responses:
+        200:
+          description: Datos el Usuario
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schema/Auth/RespuestaCurrent'
+      security:
+      - BearerAuth: []
