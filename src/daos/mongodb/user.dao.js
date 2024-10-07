@@ -7,7 +7,10 @@ class UserManager{
 
     //Metodo Obtener users
     async getUsers(){
-        return await userModel.find({})
+        
+        const users = await userModel.find({})
+        
+        return users
     }
 
     //Metodo Agregar user
@@ -44,7 +47,19 @@ class UserManager{
             console.log(error);
         }
     }
-    
+
+    //Metodo Get User By ID
+    async getUserById(id){
+        try {
+            
+            const user = await userModel.findById(id)
+            
+            return user
+        } catch (error) {
+            console.log(error);
+            
+        }
+    }
 }
 
 
