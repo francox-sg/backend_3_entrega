@@ -81,3 +81,82 @@ components:
             email: franco@gmail.com
             role: admin
             cart: hkjh324ttuytuy324jb
+      RespuestaLogout:
+        type: object
+        properties:
+          message:
+            type: string
+            description: Mensaje Logout
+        example: 
+          message: Sesion Cerrada
+      RespuestaGetAllUsers:
+        type: array
+        items:
+          properties:
+            pets: []
+            _id": 
+              type: string
+              description:  Id de Usuario
+            first_name": 
+              type: string
+              description:  Nombre de Usuario
+            last_name": 
+              type: string
+              description:  Apellido de Usuario
+            email": 
+              type: string
+              description:  Email de Usuario
+            age": 
+              type: number
+              description:  Edad de Usuario
+            password": 
+              type: string
+              description:  Pass Hasheado de Usuario
+            role": 
+              type: string
+              description:  Rol de Usuario
+        example: 
+          _id: ksjadljasdlkasjdla
+          first_name: Franco
+          last_name: Galeano
+          email: franco
+          age: 32
+          password: 123456
+          role: admin
+          pets: []
+      RespuestaGetUser:
+        type: object
+        properties:
+          pets:
+            type: array
+            description: Pets de Usuario
+          _id:
+            type: string
+            description: ID de Usuario
+          first_name:
+            type: string
+            description: Nombre de Usuario
+          last_name:
+            type: string
+            description: Apellido de Usuario
+          email:
+            type: string
+            description: Email de Usuario
+          age:
+            type: number
+            description: Edad de Usuario
+          password:
+            type: string
+            description: Password de Usuario
+          role:
+            type: string
+            description: Rol de Usuario
+        example: 
+          pets: []
+          _id: 669f0a6d3a0438b82e49d5c6
+          first_name: Juancit
+          last_name: tutankamon
+          email: jtuta@gmail.com
+          age: 30
+          password: $2b$10$0D6.1v03VPydXGnvwWlO5elh4Wvn76hSr11f98NNJi828iH5TcgQe
+          role: user
