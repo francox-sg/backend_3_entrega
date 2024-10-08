@@ -4,6 +4,24 @@ import { v4 as uuidv4 } from 'uuid';
 
 faker.locale = "es";
 
+export const generateUserTest = async () => {
+    
+    const random = Math.random()*10
+    const role = random <= 5 ? 'user' :'admin' 
+    
+    return {
+        first_name: faker.person.firstName(),
+        last_name:  faker.person.lastName(),
+        age:    Math.round(random*10),
+        email: faker.internet.email(),
+        password: await createHash('coder123'),
+        role: role, 
+        //pets: [],
+        //cart:[],
+        //_id: uuidv4(), 
+    };
+};
+
 export const generateUser = async () => {
     
     const random = Math.random()*10
