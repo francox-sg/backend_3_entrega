@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 faker.locale = "es";
 
-const generateUser = async () => {
+export const generateUser = async () => {
     
     const random = Math.random()*10
     const role = random <= 5 ? 'user' :'admin' 

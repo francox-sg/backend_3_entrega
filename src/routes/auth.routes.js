@@ -1,14 +1,9 @@
 import { Router } from "express";
-//import { userModel } from "../daos/mongodb/models/user.model.js";
-//import { createHash } from "../utils/hash.js";
 import passport from "passport";
-//import { generateToken } from "../utils/jwt.js";
 import { authorizationRole } from "../middlewares/auth.middleware.js";
-//import { resUserDto } from "../dtos/user.dto.js";
 import { validate } from "../middlewares/validation.middleware.js";
 import { authDto } from "../dtos/auth.dto.js";
 import { userDto } from "../dtos/user.dto.js";
-//import { mailService } from "../services/mail.service.js";
 import { userController } from "../controllers/user.controller.js";
 
 const router= Router();

@@ -14,7 +14,7 @@ class CartManager{
     async addCart(){
         
         const resp = await CartModel.create({products:[]})
-        console.log(resp);
+        //console.log(resp);
         return resp
     }
 

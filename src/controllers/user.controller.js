@@ -1,5 +1,4 @@
 import { userService } from "../services/user.service.js";
-//import { userModel } from "../daos/mongodb/models/user.model.js";
 import { createHash } from "../utils/hash.js";
 import { generateToken } from "../utils/jwt.js";
 import { resUserDto } from "../dtos/user.dto.js";

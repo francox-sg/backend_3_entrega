@@ -2,8 +2,8 @@ import express from 'express'
 import { __dirname } from './utils.js';
 import handlebars from 'express-handlebars'
 import { Server, Socket } from 'socket.io';
-import productRouter from './src/routes/product-router.js';
-import cartRouter from './src/routes/cart-router.js';
+import productRouter from './src/routes/product.routes.js';
+import cartRouter from './src/routes/cart.routes.js';
 import viewsRouter from './src/routes/views-router.js'
 import { ProductMgr } from './src/daos/fs/productManager.js';
 import { initMongoDB } from './src/db/database.js';
