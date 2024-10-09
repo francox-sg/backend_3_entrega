@@ -94,7 +94,7 @@ export const removeProductOfCartById =  async (req, res)=>{
 export const updateCartById =  async (req, res)=>{
     const {cid} = req.params;
     const obj = req.body;
-    console.log("controller", obj);
+    //console.log("controller", obj);
     try{
         
         const cart = await services.updateCartById(cid, obj)
@@ -221,7 +221,7 @@ export const purchase = async (req, res)=>{
         const ticketResponse = await addTicket(ticket)
 
         if(ticketResponse!=null){
-            console.log(ticketResponse);
+            //console.log(ticketResponse);
             
             return res.status(200).json({ ticket: resTicketDto(ticketResponse[0]), ticketProducts: ticketProducts ,productOutOfStock:productsOutOfStock })
         }else{

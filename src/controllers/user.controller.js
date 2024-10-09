@@ -20,7 +20,7 @@ class userContrl{
 
     async getUserById (req, res){
         const {id} = req.params;
-        console.log("userID",id);
+        //console.log("userID",id);
         
         try {
             const user = await userService.getUserById(id)
@@ -76,7 +76,7 @@ class userContrl{
                 password: await createHash(password),
                 role
             }
-            console.log(newUser);
+            //console.log(newUser);
             const response = await userService.register(newUser)//userModel.create(newUser)
             
             //Envio de mail de Bienvenida
@@ -91,7 +91,7 @@ class userContrl{
     
     async current (req, res){
 
-        console.log(req.user);
+        //console.log(req.user);
 
         res.status(200).json({
             message:"Bienvenido",

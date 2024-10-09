@@ -24,7 +24,7 @@ export const userDto = Joi.object({
 export const resUserDto = async(user)=>{
 
     const dbUser = await getUserByEmail(user.email)
-    console.log("DBUSER", dbUser);
+    //console.log("DBUSER", dbUser);
     
     const responseUserData = {
         email: user.email,

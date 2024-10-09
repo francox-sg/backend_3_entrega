@@ -5,7 +5,7 @@ class MocksClass{
 
     async mockingusers (req, res){
         const usersMock = await createUsersMock(50)
-        console.log({usersMock});
+        //console.log({usersMock});
         
         return res.status(200).json(usersMock)
     }

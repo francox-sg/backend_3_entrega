@@ -95,8 +95,8 @@ export const getProducts = async(req, res)=>{
             stringPrevPage= null
             stringNextPage= null
         }
-        console.log("prev: ",stringPrevPage);
-        console.log("nexy: ",stringNextPage);
+        //console.log("prev: ",stringPrevPage);
+        //console.log("nexy: ",stringNextPage);
 
         let resp ={
             status:         "success",
@@ -157,7 +157,7 @@ export const addProduct =  async(req, res)=>{
     if(category != undefined)      {newProductValues["category"]    = category}
     if(thumbnails != undefined)      {newProductValues["thumbnails"]    = thumbnails}
 
-console.log(newProductValues);
+//console.log(newProductValues);
     try{
         
         res.status(200).json( await services.addProduct(newProductValues))
@@ -191,7 +191,7 @@ export const updateProduct =   async(req, res)=>{
 
 
     try{
-        console.log("newProdValues",newProductValues);
+        //console.log("newProdValues",newProductValues);
         const productoActualizado = await services.updateProduct(pid, newProductValues)
         if(productoActualizado != null){
             res.status(200).json(productoActualizado)
@@ -210,7 +210,7 @@ export const updateProduct =   async(req, res)=>{
 
 export const deleteProduct =  async(req, res)=>{
     const {pid} = req.params
-    console.log("pid",pid);
+    //console.log("pid",pid);
     try{
         const status = await services.deleteProduct(pid)
         if (status != null){
