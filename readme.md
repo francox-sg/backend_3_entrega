@@ -84,18 +84,31 @@ Se agregan los endpoints:
 - /api/mocks/users --> Devuelve todos los usuarios de Mongo 
 - /api/mocks/pets --> Devuelve todos los Pets de Mongo
 
-## Desarrollo de Entrega FInal Backend 3
+## Desarrollo de Entrega Final Backend 3
 Se agrega la documentacion de los Endpoints de Usuario a traves de SWAGGER
 - /docs
 
+TESTS UNITARIOS (No se requiere en la entrega)
 Se agregan Tests Unitarios de DAO de Usuarios
 Metodo de Testeo: 
 - Ejecutar "node src/test/unitarios/user.test.js" 
 
+
+TEST DE INTEGRACION (Solo se requiere de USUARIOS)
 Se agregan Test de Integracion de Endpoints de Usuarios
 Metodo de Testeo: 
 - Ejecutar "node serverExpress.js" 
 - Ejecutar "node src/test/integracion/user.test.js" 
+
+Se agregan Test de Integracion de Endpoints de Productos
+Metodo de Testeo: 
+- Ejecutar "node serverExpress.js" 
+- Ejecutar "node src/test/integracion/product.test.js" 
+
+Se agregan Test de Integracion de Endpoints de Carrito
+Metodo de Testeo: 
+- Ejecutar "node serverExpress.js" 
+- Ejecutar "node src/test/integracion/cart.test.js" 
 
 
 
