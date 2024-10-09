@@ -160,3 +160,252 @@ components:
           age: 30
           password: $2b$10$0D6.1v03VPydXGnvwWlO5elh4Wvn76hSr11f98NNJi828iH5TcgQe
           role: user
+      RespuestaAddProduct:
+        type: object
+        properties:
+          _id:
+            type: string
+            description: ID de Producto
+          title:
+            type: string
+            description: Nombre de Producto
+          description:
+            type: string
+            description: Descripcion de Producto
+          code:
+            type: string
+            description: Codigo de Producto
+          price:
+            type: number
+            description: Precio de Producto
+          category:
+            type: string
+            description: Categoria de Producto
+          status:
+            type: string
+            description: Status de Producto
+        example: 
+          title: Mochila
+          _id: 669f0a6d3a0438b82e49d5c6
+          description: Blanca
+          code: dsfdf345
+          price: 2900
+          stock: 4
+          category: Ropa
+          status: true
+      RespuestaUpdateProduct:
+        type: object
+        properties:
+          _id:
+            type: string
+            description: ID de Producto
+          title:
+            type: string
+            description: Nombre de Producto
+          description:
+            type: string
+            description: Descripcion de Producto
+          code:
+            type: string
+            description: Codigo de Producto
+          price:
+            type: number
+            description: Precio de Producto
+          category:
+            type: string
+            description: Categoria de Producto
+          status:
+            type: string
+            description: Status de Producto
+        example: 
+          title: Mochila
+          _id: 669f0a6d3a0438b82e49d5c6
+          description: Blanca
+          code: dsfdf345
+          price: 2900
+          stock: 4
+          category: Ropa
+          status: true
+      RespuestaGetProductById:
+        type: object
+        properties:
+          _id:
+            type: string
+            description: ID de Producto
+          title:
+            type: string
+            description: Nombre de Producto
+          description:
+            type: string
+            description: Descripcion de Producto
+          code:
+            type: string
+            description: Codigo de Producto
+          price:
+            type: number
+            description: Precio de Producto
+          category:
+            type: string
+            description: Categoria de Producto
+          status:
+            type: string
+            description: Status de Producto
+        example: 
+          title: Mochila
+          _id: 669f0a6d3a0438b82e49d5c6
+          description: Blanca
+          code: dsfdf345
+          price: 2900
+          stock: 4
+          category: Ropa
+          status: true
+      RespuestaAddCart:
+        type: object
+        properties:
+          message:
+            type: string
+            description: Mensaje de Creacion de Cart
+          cart:
+            type: object
+            properties:
+              products:
+                type: array
+                description: Array de Productos
+              _id:
+                type: string
+                description: ID de Carrito
+        example: 
+          message: Se creo un nuevo cart para el Usuario franco@gmail.com
+          cart: 
+            products: []
+            id: dsfdf345
+      RespuestaAddProductToCart:
+        type: object
+        properties:
+          _id:
+            type: string
+            description: ID de Cart
+          products:
+            type: array
+            items:
+              properties:
+                quantity:
+                  type: number
+                  description: Cantidad de ese producto en carrito
+                _id:
+                  type: string
+                  description: ID de Producto
+        example: 
+          _id: jkeh4k23h42
+          products: 
+            quantity: 1
+            product: dsfdwqeewqf345
+      RespuestaCartPurchase:
+        type: object
+        properties:
+          ticket:
+            type: object
+            properties:
+              code:
+                type: string
+                description: Codigo de Ticket
+              amount:
+                type: number
+                description: Total de compra
+              purchaser:
+                type: string
+                description: Mail de Comprador
+              purchaserId:
+                type: string
+                description: Id de Comprador
+              purchase_datetime:
+                type: string
+                description: Fecha y Hora de Compra
+          ticketProducts:
+            type: array
+            items:
+              properties:
+                quantity:
+                  type: number
+                  description: Cantidad de ese producto
+                product:
+                  type: array
+                  properties:
+                    _id:
+                      type: string
+                      description: ID de Producto
+                    title:
+                      type: string
+                      description: Nombre de Producto
+                    description:
+                      type: string
+                      description: Descripcion de Producto
+                    code:
+                      type: string
+                      description: Codigo de Producto
+                    price:
+                      type: number
+                      description: Precio de Producto
+                    status:
+                      type: boolean
+                      description: Estado de Producto
+                    stock:
+                      type: number
+                      description: Stock de Producto
+                    category:
+                      type: string
+                      description: Categoria de Producto
+          productOutOfStock:
+            type: array
+            items:
+              properties:
+                quantity:
+                  type: number
+                  description: Cantidad de ese producto
+                product:
+                  type: array
+                  properties:
+                    _id:
+                      type: string
+                      description: ID de Producto
+                    title:
+                      type: string
+                      description: Nombre de Producto
+                    description:
+                      type: string
+                      description: Descripcion de Producto
+                    code:
+                      type: string
+                      description: Codigo de Producto
+                    price:
+                      type: number
+                      description: Precio de Producto
+                    status:
+                      type: boolean
+                      description: Estado de Producto
+                    stock:
+                      type: number
+                      description: Stock de Producto
+                    category:
+                      type: string
+                      description: Categoria de Producto
+        example: 
+          ticket: 
+            code: 4fda5527-9739-4c88-8165-1c877b707173
+            amount: 5800
+            purchaser: salames@gmail.com
+            purchaserId: 6705ff732851960a3bf91a16
+            purchase_datetime: "2024-10-09T04:20:56.208Z"
+          ticketProducts: 
+                  quantity: 2
+                  product: 
+                      _id: 66b2a8b1d35a5d997629367d
+                      title: Mochilasd
+                      description: Blancas
+                      code: 123456
+                      price: 90
+                      status: ru
+                      stock: 5
+                      category: Ropa
+          productOutOfStock: []
+

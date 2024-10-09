@@ -106,3 +106,130 @@ paths:
                 $ref: '#components/schema/Auth/RespuestaGetUser' 
       security:
       - BearerAuth: []
+  /api/products/:
+    post:
+      tags:
+        - Product
+      summary: Agregar Producto
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#components/parameters/schemas/SchemaAddProduct'
+        required: true
+      responses:
+        200:
+          description: Usuario
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schema/Auth/RespuestaAddProduct' 
+      security:
+      - BearerAuth: []
+  /api/products/{id}:
+    put:
+      tags:
+        - Product
+      summary: Actualizar Producto
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: id referente al producto
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#components/parameters/schemas/SchemaUpdateProduct'
+        required: true
+      responses:
+        200:
+          description: Usuario
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schema/Auth/RespuestaUpdateProduct'
+    get:
+      tags:
+        - Product
+      summary: Obtener Producto Por Id
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: id referente al producto
+          schema:
+            type: string
+      responses:
+        200:
+          description: Usuario
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schema/Auth/RespuestaGetProductById' 
+      security:
+      - BearerAuth: []
+  /api/carts/:
+    post:
+      tags:
+        - Cart
+      summary: Crear Cart
+      responses:
+        200:
+          description: Cart
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schema/Auth/RespuestaAddCart' 
+      security:
+      - BearerAuth: []
+  /api/carts/{cid}/products/{pid}:
+    post:
+      tags:
+        - Cart
+      summary: Agregar Producto a Cart
+      parameters:
+        - in: path
+          name: cid
+          required: true
+          description: id referente al carrito
+          schema:
+            type: string
+        - in: path
+          name: pid
+          required: true
+          description: id referente al Producto
+          schema:
+            type: string
+      responses:
+        200:
+          description: Cart
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schema/Auth/RespuestaAddProductToCart' 
+      security:
+      - BearerAuth: []
+  /api/carts/{cid}:
+    get:
+      tags:
+        - Cart
+      summary: Purchase Cart
+      parameters:
+        - in: path
+          name: cid
+          required: true
+          description: id referente al carrito
+          schema:
+            type: string
+      responses:
+        200:
+          description: Cart
+          content:
+            application/json:
+              schema:
+                $ref: '#components/schema/Auth/RespuestaCartPurchase' 
+      security:
+      - BearerAuth: []

@@ -85,7 +85,13 @@ Se agregan los endpoints:
 - /api/mocks/pets --> Devuelve todos los Pets de Mongo
 
 ## Desarrollo de Entrega Final Backend 3
-### Se agrega la documentacion de los Endpoints de Usuario a traves de SWAGGER
+
+Se agrega la documentacion a traves de  SWAGGER de los endpoints de las siguientes entidades:
+
+- User
+- Product
+- Cart
+
 Ingresar por Navegador a:
 - /docs
 

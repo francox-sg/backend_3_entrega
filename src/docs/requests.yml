@@ -48,6 +48,76 @@ components:
             type: string
             description: Password de Usuario
             example: 123456
+      SchemaAddProduct:
+        type: object
+        required:
+          - title
+          - description
+          - code
+          - price
+          - stock
+          - category
+          - status
+        properties:
+          title:
+            type: string
+            description: Nombre de Producto
+            example: Mochila
+          description:
+            type: string
+            description: Descripcion de Producto
+            example: Blanca
+          code:
+            type: string
+            description: Codigo de Producto
+            example: '13456'
+          price:
+            type: number
+            description: Precio de Producto
+            example: 2900
+          stock:
+            type: number
+            description: Stock de Producto
+            example: 4
+          category:
+            type: string
+            description: Categoria de Producto
+            example: Ropa
+          status:
+            type: string
+            description: Status de Producto
+            example: true
+      SchemaUpdateProduct:
+        type: object
+        properties:
+          title:
+            type: string
+            description: Nombre de Producto
+            example: Mochila
+          description:
+            type: string
+            description: Descripcion de Producto
+            example: Blanca
+          code:
+            type: string
+            description: Codigo de Producto
+            example: '13456'
+          price:
+            type: number
+            description: Precio de Producto
+            example: 2900
+          stock:
+            type: number
+            description: Stock de Producto
+            example: 4
+          category:
+            type: string
+            description: Categoria de Producto
+            example: Ropa
+          status:
+            type: string
+            description: Status de Producto
+            example: true
   securitySchemes:
     BearerAuth:
       type: http
