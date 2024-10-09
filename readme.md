@@ -84,6 +84,8 @@ Se agregan los endpoints:
 - /api/mocks/users --> Devuelve todos los usuarios de Mongo 
 - /api/mocks/pets --> Devuelve todos los Pets de Mongo
 
+
+
 ## Desarrollo de Entrega Final Backend 3
 
 Se agrega la documentacion a traves de  SWAGGER de los endpoints de las siguientes entidades:
@@ -94,6 +96,11 @@ Se agrega la documentacion a traves de  SWAGGER de los endpoints de las siguient
 
 Ingresar por Navegador a:
 - /docs
+
+--> Recordar que:
+- Se requiere el Logueo de un ADMIN para apuntar a endpoints de Product
+- Se requiere el Logueo de un USER para apuntar a endpoints de Cart
+
 
 ### TESTS UNITARIOS (No se requiere en la entrega)
 #### Se agregan Tests Unitarios de DAO de Usuarios
@@ -123,5 +130,10 @@ Metodo de Testeo:
 - Ejecutar "node src/test/integracion/cart.test.js" 
 
 
+### Imagen en Docker 
 
+Se realiza una imagen del proyecto Utilizando Docker.
 
+- Enlace de Imagen de Docker: docker pull francoxsg/api-coder:1.0.0
+
+(Se recomienda utilizar el puerto 8080 ya que SWAGGER apunta allí)
